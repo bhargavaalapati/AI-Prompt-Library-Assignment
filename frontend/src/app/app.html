@@ -1,0 +1,12 @@
+<div style="min-height: 100vh; background-color: #f8f9fa; font-family: sans-serif;">
+  <nav style="padding: 1.2rem 2rem; background: #212529; color: white; display: flex; align-items: center; gap: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <h2 style="margin: 0; font-size: 22px; tracking: 1px;">AI Prompt Library</h2>
+    <div style="display: flex; gap: 15px;">
+      <a routerLink="/add-prompt" style="color: #ced4da; text-decoration: none; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#ced4da'">Add New Prompt</a>
+    </div>
+  </nav>
+
+  <div style="padding: 30px 20px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
