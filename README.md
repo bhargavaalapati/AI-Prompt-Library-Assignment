@@ -5,6 +5,15 @@ Production-Ready • Scalable • Full-Stack System Design
 
 ---
 
+## ⚠️ Live Deployment Notes (Free Tier Limits)
+
+The live deployment utilizes Vercel (Frontend) and Render Free Tier (Backend) with SQLite.
+
+- **Cold Starts:** Because the backend is on a free Render instance, it sleeps after 15 minutes of inactivity. The initial API request may take 30-50 seconds to resolve while the server wakes up. Subsequent requests will be fast.
+- **Graceful Degradation (Views):** The Redis caching layer was intentionally omitted from the live deployment to utilize free-tier hosting. The backend features a graceful fallback (`try/except` block) that safely displays **"Offline"** for the view counter instead of crashing the application when Redis is unreachable. (Redis view counting works fully in the local Docker environment).
+
+---
+
 ## 🚀 Badges
 
 ![Status](https://img.shields.io/badge/Status-Production--Ready-brightgreen)
