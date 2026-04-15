@@ -7,8 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PromptService {
   private http = inject(HttpClient);
-  // The proxy we set up earlier routes /api to localhost:8000
-  private apiUrl = '/api/prompts/';
+  private apiUrl = 'https://ai-prompt-library-assignment.onrender.com/api/prompts/';
 
   getPrompts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);

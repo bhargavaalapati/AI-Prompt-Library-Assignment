@@ -7,7 +7,7 @@ export class AuthService {
   http = inject(HttpClient);
 
   login(credentials: any) {
-    return this.http.post<any>('/api/login/', credentials).pipe(
+    return this.http.post<any>('https://ai-prompt-library-assignment.onrender.com/api/login/', credentials).pipe(
       tap(res => {
         if (res.token) localStorage.setItem('token', res.token);
       })
